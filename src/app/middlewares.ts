@@ -5,9 +5,9 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 const middlewares = [
+  cors(corsOptions), // enable cross-origin resource sharing
   json(), // parsing application/json
   urlencoded({ extended: true }), // parsing application/x-www-form-urlencoded
-  cors(corsOptions), // enable cross-origin resource sharing
   helmet(), // helps to secure various HTTP headers
   morgan("tiny"), // http request logger
 ];
